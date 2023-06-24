@@ -6,7 +6,11 @@ At bottom, it's really just a *file structure* with 3 levels. I like to use this
 
 ![image](/demo/illustration.png)
 
+* In this repo, the main.js is called hj.js for "hellojson" and the class file is called classHeyJson.js. Helper filenames vary.
+
 This setup serves me well whenever I'm building alternative user interfaces for tools like Salesforce, Airtable, Quickbooks, and Wordpress.
+
+You can see a demo of the plugin in action [here](https://philwonski.github.io/twplugins-hello-json/#heyJay-test).
 
 # Why?
 
@@ -150,10 +154,10 @@ So the top of my file `TWdev/TW5/editions/empty/tiddlywiki.info` now looks like 
 	"plugins": [
 		"philwonski/twplugins-hello-json"
 	],
-	"themes": [
-		"tiddlywiki/vanilla",
-		"tiddlywiki/snowwhite"
-	],
 ```
 
 And I can generate a static html version of the wiki with my plugin included by running this command in the TW5 folder: `node ./tiddlywiki.js editions/empty --build index` and then opening the file `TWdev/TW5/editions/empty/output/index.html#heyJay-test` in my browser.
+
+## Coffeescript
+
+Make fun of me all you want, I get a ton of mileage out of Coffeescript for all types of javascript dev. I use VSCode and the "CoffeeScript Preview" plugin by Drew Barrett. I just write my code in Coffeescript and then compile it to javascript with a single command `coffee -c classHeyJson.coffee` from the /files folder.
