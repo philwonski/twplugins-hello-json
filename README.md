@@ -75,11 +75,7 @@ What really supercharges this workflow is the ability to use tools like ChatGPT 
 
 For example, when I have a new need, usually the prompt to ChatGPT will go something like this, which I used to get the `fetcher.js` in this repo:
 
-```
-i'm using javascript in the browser. I need a sample script that I can require and use in my main app.js script. The sample script should return a promise.
-
-the script should simply fetch json from a url and return a string in the promise with the stringified json.
-```
+> i'm using javascript in the browser. I need a sample script that I can require and use in my main app.js script. The sample script should return a promise. the script should simply fetch json from a url and return a string in the promise with the stringified json.
 
 Now you can check `fetcher.js` to see exactly what ChatGPT generated for me. Sweet!
 
@@ -160,4 +156,4 @@ And I can generate a static html version of the wiki with my plugin included by 
 
 ## Coffeescript
 
-Make fun of me all you want, I get a ton of mileage out of Coffeescript for all types of javascript dev. I use VSCode and the "CoffeeScript Preview" plugin by Drew Barrett. I just write my code in Coffeescript and then compile it to javascript with a single command `coffee -c classHeyJson.coffee` from the /files folder.
+Make fun of me all you want, I get a ton of mileage out of Coffeescript for all types of javascript dev. I use VSCode and the "CoffeeScript Preview" plugin by Drew Barrett. I just write my code in Coffeescript and then compile it to javascript with a single command, `coffee -c classHeyJson.coffee`, from the /files folder.
