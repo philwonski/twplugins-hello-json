@@ -10,7 +10,7 @@ At bottom, it's really just a *file structure* with 3 levels. I like to use this
 
 This setup serves me well whenever I'm building alternative user interfaces for tools like Salesforce, Airtable, Quickbooks, and Wordpress.
 
-You can see a demo of the plugin in action [here](https://philwonski.github.io/twplugins-hello-json/#heyJay-test).
+You can see a demo of the plugin in action [here](https://philwonski.github.io/twplugins-hello-json/#heyJay-test) and actual integrations in the [hello-json-advanced](https://github.com/philwonski/twplugins-hello-json-advanced) repo.
 
 # Why?
 
@@ -18,7 +18,7 @@ TiddlyWiki, typically known as a "second brain" solution, is actually a full-fle
 
 > *That's the Why:* TiddlyWiki and WikiText are just really great tools for building user interfaces FAST.
 
-My focus with this framework is on leveraging that speed to build internal tools for small teams. I do it with  TiddlyWiki + the principles I explore in this repo, as well as its sister repo [hello-json-advanced](). Some fun use cases I've developed with this stack include:
+My focus with this framework is on leveraging that speed to build internal tools for small teams. I do it with  TiddlyWiki + the principles I explore in this repo, as well as its sister repo [hello-json-advanced](https://github.com/philwonski/twplugins-hello-json-advanced). Some fun use cases I've developed with this stack include:
 
 - Work Order Management with Quickbooks for a music studio
 - Claims Management in Salesforce for an insurance processor
@@ -112,7 +112,7 @@ I have also included the `heyJay-test.tid` to to show how to use the plugin in a
 
 # Advanced Repo
 
-The advanced repo is a more complex example of a plugin that uses the Hello Json workflow to do a bunch of different things. But the point of all this is that the advanced repo still has the exact same structure as this one:
+The [advanced repo](https://github.com/philwonski/twplugins-hello-json-advanced) is a more complex example of a plugin that uses the Hello Json workflow to do a bunch of different things. But the point of all this is that the advanced repo still has the exact same structure as this one:
 
 - *Entry hj.js* file to take params from the frontend and pass them to the class
   - *classHeyJson.coffee* file with all the cool methods
