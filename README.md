@@ -4,7 +4,7 @@ HelloJson is an opinionated workflow for developing TiddlyWiki plugins -- namely
 
 At bottom, it's really just a *file structure* with 3 levels. I like to use this structure for js development in general, and TiddlyWiki plugins in particular.
 
-![image](/demo/illustration.png)
+![image](/docs/illustration.png)
 
 * In this repo, the main.js is called hj.js for "hellojson" and the class file is called classHeyJson.js. Helper filenames vary.
 
