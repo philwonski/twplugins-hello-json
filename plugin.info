@@ -1,0 +1,10 @@
+{
+	"title": "philwonski/twplugins-hello-json",
+	"description": "plugin boilerplate for interacting with JSON APIs",
+	"author": "@philwonski",
+	"version": "0.0.1",
+	"core-version": ">=5.2.4",
+	"list": "heyJay-test",
+	"source": "https://github.com/philwonski/twplugins-hello-json",
+	"plugin-type": "plugin"
+}
