@@ -131,16 +131,16 @@ I set up my dev environment exactly like the instructions here:
 
 [https://tiddlywiki.com/dev/#Developing%20plugins%20using%20Node.js%20and%20GitHub](https://tiddlywiki.com/dev/#Developing%20plugins%20using%20Node.js%20and%20GitHub)
 
-It may seem like a bunch of steps but the process can be boiled down to this:
+It may seem like a bunch of steps, but the build process is very logical once you get the hang of it. It can be boiled down to this:
 
-1. Make a folder on your computer called TWdev (or whatever you want). This is where you will keep all your plugins you work on.
+1. Make a folder on your computer called TWdev (or whatever you want). This is where you will keep all your plugins that you work on.
 
 2. Inside the new directory, install a local copy of TW5 with `git clone https://github.com/Jermolene/TiddlyWiki5.git TW5`.
 
-3. Now you can see the TW5 has two important folders: `editions` and `plugins`. All we are doing is:
-    1. Adding our own plugin code under plugins
-    2. Picking an edition, like `TW5/editions/empty` and adding a quick reference to our plugin in the `tiddlywiki.info` file
-    3. Running a single command in the TW5 folder to build that edition with our plugin included, like `node ./tiddlywiki.js editions/empty --build index`... this will create a static html version of the wiki you can view and share.
+3. Now you can see the TW5 directory has two important folders: `editions` and `plugins`. All we are doing is:
+    1. Adding our own plugin code under plugins.
+    2. Picking an edition, like `TW5/editions/empty`, and adding a quick reference to our plugin in the `tiddlywiki.info` file.
+    3. Running a single command *in the TW5 folder* to build that particular edition with our plugin included, like `node ./tiddlywiki.js editions/empty --build index`... this will create a static html version of the wiki you can view and share. Find the static file in the the `output` folder under the edition you just built.
 
 So the top of my file `TWdev/TW5/editions/empty/tiddlywiki.info` now looks like this:
 
@@ -150,10 +150,11 @@ So the top of my file `TWdev/TW5/editions/empty/tiddlywiki.info` now looks like 
 	"plugins": [
 		"philwonski/twplugins-hello-json"
 	],
+
 ```
 
-And I can generate a static html version of the wiki with my plugin included by running this command in the TW5 folder: `node ./tiddlywiki.js editions/empty --build index` and then opening the file `TWdev/TW5/editions/empty/output/index.html#heyJay-test` in my browser.
+And I can generate a static html version of the wiki, with my plugin included, by running this command in the TW5 folder: `node ./tiddlywiki.js editions/empty --build index` and then opening the file `...TWdev/TW5/editions/empty/output/index.html#heyJay-test` in my browser.
 
 ## Coffeescript
 
-Make fun of me all you want, I get a ton of mileage out of Coffeescript for all types of javascript dev. I use VSCode and the "CoffeeScript Preview" plugin by Drew Barrett. I just write my code in Coffeescript and then compile it to javascript with a single command, `coffee -c classHeyJson.coffee`, from the /files folder.
+Make fun of me all you want, I get a ton of mileage out of Coffeescript for all types of javascript dev. I use VSCode and the "CoffeeScript Preview" plugin by Drew Barrett. I just write my code in Coffeescript and then compile it to javascript with a single command `coffee -c classHeyJson.coffee` from the /files folder.
