@@ -4,4 +4,14 @@ modified: 20230622164533333
 tags: example
 type: text/vnd.tiddlywiki
 
+!! Example
+
+Below the line, I am invoking the hello-json widget with the command "hangover". 
+
+`<$hellojson command="hangover"/>`
+
+The hangover command calls the free Wikipedia JSON API to get the number of views of the article "Hangover" on New Year's Day, 2023.
+
+<hr>
+
 <$hellojson command="hangover"/>
