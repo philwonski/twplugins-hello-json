@@ -39,7 +39,7 @@ The basic structure starts with just 3 files:
 3. `fetcher.js` - our first helper file, which abstracts a GET request and keeps the class file clean
 
 
-*Plugin File (hj.js)*
+### Plugin File (hj.js)
 
 In this way, your plugin file itself is just a boilerplate with minimal logic... that is, just enough logic to pass params from the frontend to the class, and handle the response when it comes back from the class. 
 
@@ -47,7 +47,7 @@ In this way, your plugin file itself is just a boilerplate with minimal logic...
 
 Don't be intimidated by the async stuff: in fact, **my main motivation for creating this system was to make asyncronous code easier to write and read.**
 
-*Class File (classHeyJson.js)*
+### Class File (classHeyJson.js)
 
 The class file is the heart of this setup. It's where you get to define all the cool methods you want your plugin to have: `fetch(url)`, `post(url, data)`, `makeWordpressPost(post)`, `getSalesforceRecord(opp)`, you get it. 
 
@@ -69,13 +69,15 @@ In other words, the reason you should bother installing good 'ol coffeescript is
 
 You will see in the classHeyJson.coffee in this repo (and the advanced rep) that virtually every method is structured just like that, a simple try/catch block that calls a helper function with `await`. Neat. 
 
-*Helper File (fetcher.js)*
+### Helper File (fetcher.js)
 
 What really supercharges this workflow is the ability to use tools like ChatGPT to scaffold helper functions that do more complex stuff. The key to the framework is respecting the 3-tiered structure of the plugin and using the class file to handle promises from the helper files.
 
 For example, when I have a new need, usually the prompt to ChatGPT will go something like this, which I used to get the `fetcher.js` in this repo:
 
-> i'm using javascript in the browser. I need a sample script that I can require and use in my main app.js script. The sample script should return a promise. the script should simply fetch json from a url and return a string in the promise with the stringified json.
+> i'm using javascript in the browser. I need a sample script that I can require and use in my main app.js script. The sample script should return a promise. 
+
+> the script should simply fetch json from a url and return a string in the promise with the stringified json.
 
 Now you can check `fetcher.js` to see exactly what ChatGPT generated for me. Sweet!
 
@@ -108,7 +110,7 @@ After the brief setup, note the file structure, which explains the basics of my 
   - `classHeyJson.js` - compiled version of the class (run `coffee -c classHeyJson.coffee` to compile)
   - `fetcher.js` - a ChatGPT-generated helper used by the HeyJson class to fetch data from a url
 
-I have also included the `heyJay-test.tid` to to show how to use the plugin in any Wiki. You can view the example index.html output with the heyJay-test loaded [here](https://philwonski.github.io/twplugins-hello-json/demo/index.html#heyJay-test).
+I have also included the `heyJay-test.tid` to to show how to use the plugin in any Wiki. You can view the example index.html output with the heyJay-test loaded [here](https://philwonski.github.io/twplugins-hello-json/#heyJay-test).
 
 # Advanced Repo
 
