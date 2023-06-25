@@ -6,14 +6,8 @@
 
   HeyJson = class HeyJson {
     constructor(hey = {}) {
-      this.runName = this.runName.bind(this);
       this.runFetch = this.runFetch.bind(this);
-      this.runMsg = this.runMsg.bind(this);
       this.hey = hey;
-    }
-
-    runName() {
-      return this.hey;
     }
 
     async runFetch(url) {
@@ -26,12 +20,6 @@
         console.log(e);
         return "error fetching json in runFetch method";
       }
-    }
-
-    runMsg() {
-      var msg;
-      msg = "hello there";
-      return msg;
     }
 
   };
