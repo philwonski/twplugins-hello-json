@@ -2,11 +2,13 @@
 
 HelloJson is an opinionated workflow for developing [TiddlyWiki](https://tiddlywiki.com) plugins -- namely plugins that do asynchronous CRUD operations on JSON from external sources (like JSON from SaaS apps or any other REST API). 
 
+Uhm, what was that?
+
 At bottom, it's really just a *file structure* with 3 levels. I like to use this structure for js development in general, and TiddlyWiki plugins in particular.
 
 ![image](/docs/illustration.png)
 
-* In this repo, the main.js is called hj.js for "hellojson" and the class file is called classHeyJson.js. Helper filenames vary.
+* In this repo, the main.js is called hj.js for "hellojson" and the class file is called classHeyJson.js. Helper filenames vary and start with `helper-`.
 
 This setup serves me well whenever I'm building alternative user interfaces for tools like Salesforce, Airtable, Quickbooks, and Wordpress.
 
@@ -36,7 +38,7 @@ The basic structure starts with just 3 files:
 
 1. `hj.js` - the main plugin file that's (almost) straight from the TiddlyWiki plugin boilerplate 
 2. `classHeyJson.js` - required inside the `hj.js` file, it has the cool methods like `fetch(url)`
-3. `fetcher.js` - our first helper file, which abstracts a GET request and keeps the class file clean
+3. `helper-fetcher.js` - our first helper file, which abstracts a GET request and keeps the class file clean
 
 
 ### Plugin File (hj.js)
@@ -69,19 +71,19 @@ In other words, the reason you should bother installing good 'ol coffeescript is
 
 You will see in the classHeyJson.coffee in this repo (and the advanced rep) that virtually every method is structured just like that, a simple try/catch block that calls a helper function with `await`. Neat. 
 
-### Helper File (fetcher.js)
+### Helper File (helper-fetcher.js)
 
 What really supercharges this workflow is the ability to use tools like ChatGPT to scaffold helper functions that do more complex stuff. The key to the framework is respecting the 3-tiered structure of the plugin and using the class file to handle promises from the helper files.
 
-For example, when I have a new need, usually the prompt to ChatGPT will go something like this, which I used to get the `fetcher.js` in this repo:
+For example, when I have a new need, usually the prompt to ChatGPT will go something like this, which I used to get the `helper-fetcher.js` in this repo:
 
 > i'm using javascript in the browser. I need a sample script that I can require and use in my main app.js script. The sample script should return a promise. 
 
 > the script should simply fetch json from a url and return a string in the promise with the stringified json.
 
-Now you can check `fetcher.js` to see exactly what ChatGPT generated for me. Sweet!
+Now you can check `helper-fetcher.js` to see exactly what ChatGPT generated for me. Sweet!
 
-In practice, you can have many helper files besides just the JSON fetcher. Some random examples I've put together in the past include:
+In practice, you can have many helper files besides just the JSON fetcher. Some random examples I've put together in the past include `helper-`:
 
 4. `poster.js` - a helper to post data to a url
 5. `parsexml.js` - a helper to parse xml into json and save in the wiki
@@ -108,7 +110,7 @@ After the brief setup, note the file structure, which explains the basics of my 
   - `tiddlywiki.files` - this is an important file which tells TiddlyWiki to load the files in this directory
   - `classHeyJson.coffee` - this is the main class that I use to write logic like a human
   - `classHeyJson.js` - compiled version of the class (run `coffee -c classHeyJson.coffee` to compile)
-  - `fetcher.js` - a ChatGPT-generated helper used by the HeyJson class to fetch data from a url
+  - `helper-fetcher.js` - a ChatGPT-generated helper used by the HeyJson class to fetch data from a url
 
 I have also included the `heyJay-test.tid` to to show how to use the plugin in any Wiki. You can view the example index.html output with the heyJay-test loaded [here](https://philwonski.github.io/twplugins-hello-json/#heyJay-test).
 

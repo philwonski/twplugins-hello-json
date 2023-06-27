@@ -11,10 +11,10 @@
 			"suffix": ""
 		},
 		{
-			"file": "fetcher.js",
+			"file": "helper-fetcher.js",
 			"fields": {
 				"type": "application/javascript",
-				"title": "$:/plugins/philwonski/twplugins-hello-json/fetcher.js",
+				"title": "$:/plugins/philwonski/twplugins-hello-json/helper-fetcher.js",
 				"module-type": "library"
 			},
 			"prefix": "",

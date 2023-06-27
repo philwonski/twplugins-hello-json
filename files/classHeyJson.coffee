@@ -1,4 +1,4 @@
-fetchJson = require('./fetcher.js')
+fetchJson = require('./helper-fetcher.js')
 
 class HeyJson
     constructor: (@hey = {}) ->

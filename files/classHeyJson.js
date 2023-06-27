@@ -2,7 +2,7 @@
 (function() {
   var HeyJson, fetchJson;
 
-  fetchJson = require('./fetcher.js');
+  fetchJson = require('./helper-fetcher.js');
 
   HeyJson = class HeyJson {
     constructor(hey = {}) {
