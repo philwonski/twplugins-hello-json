@@ -73,7 +73,7 @@ You will see in the classHeyJson.coffee in this repo (and the advanced rep) that
 
 ### Helper File (helper-fetcher.js)
 
-What really supercharges this workflow is the ability to use tools like ChatGPT to scaffold helper functions that do more complex stuff. The key to the framework is respecting the 3-tiered structure of the plugin and using the class file to handle promises from the helper files.
+What really supercharges this workflow is the ability to use tools like ChatGPT to scaffold helper functions that do more complex stuff. These are just Common JS modules. The key to the framework is respecting the 3-tiered structure of the plugin and using the class file to handle promises from the helper modules.
 
 For example, when I have a new need, usually the prompt to ChatGPT will go something like this, which I used to get the `helper-fetcher.js` in this repo:
 
