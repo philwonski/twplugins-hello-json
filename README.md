@@ -1,6 +1,6 @@
 # HelloJson
 
-HelloJson is an opinionated workflow for developing TiddlyWiki plugins -- namely plugins that do asynchronous CRUD operations on JSON from external sources (like JSON from SaaS apps or any other REST API). 
+HelloJson is an opinionated workflow for developing [TiddlyWiki](https://tiddlywiki.com) plugins -- namely plugins that do asynchronous CRUD operations on JSON from external sources (like JSON from SaaS apps or any other REST API). 
 
 At bottom, it's really just a *file structure* with 3 levels. I like to use this structure for js development in general, and TiddlyWiki plugins in particular.
 
